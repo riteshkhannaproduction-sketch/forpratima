@@ -23,7 +23,8 @@ export default function LetterForm({ onLetterAdded }) {
     setError('');
 
     try {
-      const res = await fetch('/api/letters', {
+      const API_URL = import.meta.env.VITE_API_URL || '';
+      const res = await fetch(`${API_URL}/api/letters`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

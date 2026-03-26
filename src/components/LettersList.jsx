@@ -15,7 +15,8 @@ export default function LettersList({ refreshTrigger }) {
   const fetchLetters = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch('/api/letters');
+      const API_URL = import.meta.env.VITE_API_URL || '';
+      const res = await fetch(`${API_URL}/api/letters`);
       if (!res.ok) throw new Error('Failed to fetch letters');
       const data = await res.json();
       setLetters(data);
@@ -33,7 +34,8 @@ export default function LettersList({ refreshTrigger }) {
     ));
     
     try {
-      await fetch(`/api/letters/${id}/read`, { method: 'PATCH' });
+      const API_URL = import.meta.env.VITE_API_URL || '';
+      await fetch(`${API_URL}/api/letters/${id}/read`, { method: 'PATCH' });
     } catch (err) {
       console.error('Failed to mark letter as read', err);
     }

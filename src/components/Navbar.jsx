@@ -9,7 +9,8 @@ export default function Navbar() {
   useEffect(() => {
     const fetchUnreadCount = async () => {
       try {
-        const res = await fetch('/api/letters/unread-count');
+        const API_URL = import.meta.env.VITE_API_URL || '';
+        const res = await fetch(`${API_URL}/api/letters/unread-count`);
         const data = await res.json();
         if (data.count !== undefined) {
           setUnreadCount(data.count);
