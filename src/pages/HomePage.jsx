@@ -60,7 +60,7 @@ export default function HomePage() {
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
             className="text-teal-400 font-semibold tracking-[0.2em] uppercase text-sm"
           >
-            Made by Harshit for Tina ✨
+            Made by Harshit for Pratima ✨
           </motion.p>
         </motion.div>
 

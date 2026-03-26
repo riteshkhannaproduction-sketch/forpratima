@@ -37,7 +37,7 @@ export default function AlbumPage() {
               Return
             </button>
             <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400 tracking-tight">
-              Curated for Tina
+              Curated for Pratima
             </h1>
             <p className="text-teal-400 mt-3 text-lg font-medium tracking-wide">
               A collection of moments wrapped in melodies.
